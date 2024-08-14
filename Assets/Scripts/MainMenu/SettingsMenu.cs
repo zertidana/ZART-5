@@ -11,6 +11,10 @@ public class SettingsMenu : MonoBehaviour
     public Dropdown resolutionDropdown;
     Resolution[] resolutions;
 
+    public GameObject mainMenuCanvas;
+
+    public GameObject settingsMenuCanvas;
+
     void Start()
     {
         resolutions = Screen.resolutions;
@@ -42,4 +46,19 @@ public class SettingsMenu : MonoBehaviour
     {
         Screen.fullScreen = isFullScreen;
     }
-}
+
+    public void BackToMainMenu()
+    {
+        // Show the main menu canvas
+        if (mainMenuCanvas != null)
+        {
+            mainMenuCanvas.SetActive(true);
+        }
+
+        // Hide the settings menu canvas
+        if (settingsMenuCanvas != null)
+        {
+            settingsMenuCanvas.SetActive(false);
+        }
+    }
+    }
