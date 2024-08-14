@@ -49,7 +49,7 @@ public class PlayerStats : MonoBehaviour
             oxygenCo = StartCoroutine(DecreaseStats(0, 3, 3));
         }
 
-        //display currentstats in stat ui
+        //displaye currentstats in stat ui
         for(int i = 0; i < maxStats.Count; i++)
         {
             statBars[i].value = currentStats[i];

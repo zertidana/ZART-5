@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f09d0a73cf285a40925d602c86ea510, type: 3}
   m_Name: FishMedium
   m_EditorClassIdentifier: 
-  id: 0
-  itemName: 
-  size: {x: 0, y: 0}
-  sprite: {fileID: 0}
-  WorldPrefab: {fileID: 0}
+  id: 1
+  itemName: Medium Fish
+  size: {x: 2, y: 2}
+  sprite: {fileID: 21300000, guid: 4fede9a84c4824347ad7fdcc1ab5eb3d, type: 3}
+  WorldPrefab: {fileID: 8363481215755269634, guid: e50b44b0caf2c1f42909487f9aafd91b, type: 3}

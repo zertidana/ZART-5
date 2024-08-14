@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f09d0a73cf285a40925d602c86ea510, type: 3}
   m_Name: FillerObject
   m_EditorClassIdentifier: 
-  id: 0
-  itemName: 
+  id: -1
+  itemName: Filler
   size: {x: 0, y: 0}
   sprite: {fileID: 0}
   WorldPrefab: {fileID: 0}

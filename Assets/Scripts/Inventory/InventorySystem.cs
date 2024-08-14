@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+
 
 public class InventorySystem : MonoBehaviour
 {
@@ -21,6 +23,10 @@ public class InventorySystem : MonoBehaviour
     public GameObject uiPrefab;
     public bool inventoryOpen;
 
+    public GameObject cam;
+
+    public float playerReach;
+
     public ItemScriptableObject fillerItem;
 
     // Start is called before the first frame update
@@ -34,7 +40,7 @@ public class InventorySystem : MonoBehaviour
         //create the grid
         grid = new Grid<GridObject>(gridWidth, gridHeight, cellSize, new Vector3(0, 0, 0), (Grid<GridObject> g, int x, int y) => new GridObject(g, x, y));
 
-        SortItems();        
+        SortItems();
     }
 
     private void Update()
@@ -53,7 +59,79 @@ public class InventorySystem : MonoBehaviour
             }
             inventoryOpen = !inventoryOpen;
         }
+                InteractableObject i = HoverObject();
+
+        if(i!= null)
+        {
+            //check if the player left clicks
+            if (Input.GetMouseButtonDown(0))
+            {
+                //pickup item
+                PickUpItem(i);
+            }
+        }
+            if (Input.GetMouseButtonDown(1))
+            {
+                if (EventSystem.current.IsPointerOverGameObject())
+                {
+                    PointerEventData hoveredObj = ExtendedStandaloneInputModule.GetPointerEventData();
+                    foreach(GameObject currentObj in hoveredObj.hovered)
+                    {
+                        InteractableObject io = currentObj.GetComponent<InteractableObject>();
+                        if (io != null)
+                        {
+                            Debug.Log("remove " + io.item.name);
+                            RemoveItem(io.item);
+                            break;
+                        }
+                    }
+                }
+            }
     }
+
+    #region Interacting with items
+
+    InteractableObject HoverObject()
+    {
+        RaycastHit hit;
+        if(Physics.Raycast(cam.transform.position,cam.transform.forward, out hit, playerReach))
+        {
+            return hit.collider.gameObject.GetComponent<InteractableObject>();
+        }
+
+        return null;
+    }
+
+    //called when you pick up something
+    void PickUpItem(InteractableObject itemPicked)
+    {
+        inventoryList.Add(itemPicked.item);
+
+        //sort inventory
+        if(SortItems() == false)
+        {
+            //remove it from the inventory list
+            inventoryList.Remove(itemPicked.item);
+
+            //error
+            Debug.Log("inventory full!");
+
+            return;
+        }
+
+        //if all goes well, destroy the object
+        Destroy(itemPicked.gameObject);
+    }
+
+    //remove object from inventory and spawn it in the world
+    void RemoveItem(ItemScriptableObject item)
+    {
+        inventoryList.Remove(item);
+        SortItems();
+        Instantiate(item.WorldPrefab, cam.transform.position, cam.transform.rotation);
+    }
+
+    #endregion
 
     #region Functions to sort the inventory
 
