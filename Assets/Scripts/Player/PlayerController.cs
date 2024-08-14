@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour
 {
     //reference the transform
     Transform t;
-
+    InventorySystem iSystem;
     public static bool inWater;
     public static bool isSwimming;
 
@@ -43,13 +44,19 @@ public class PlayerController : MonoBehaviour
         t = transform;
         Cursor.lockState = CursorLockMode.Locked;
         inWater = false;
+
+        iSystem = InventorySystem.Instance;
     }
 
     private void FixedUpdate()
     {
-        SwimmingOrFloating();
-        Move();
+        if (!iSystem.inventoryOpen)
+        {
+            SwimmingOrFloating();
+            Move();
+        }
     }
+
 
         private void OnTriggerEnter(Collider other)
     {
@@ -96,9 +103,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LookAround();
+        if (!iSystem.inventoryOpen)
+        {
+            LookAround();
+        }
 
-        //just to debug haha we will remove later
+        //debug function to unlock cursor
         if (Input.GetKey(KeyCode.Escape))
         {
             Cursor.lockState = CursorLockMode.None;
