@@ -11,7 +11,6 @@ public class PlayerStats : MonoBehaviour
 
     Coroutine oxygenCo;
     Coroutine hungerCo;
-   
 
     bool swimCheck;
 
@@ -25,7 +24,7 @@ public class PlayerStats : MonoBehaviour
         //initialise currentStats to the max amount
         currentStats = new List<int>(maxStats);
 
-        //start decreasing the values of hunger
+        //start decreasing the values of hunger and thirst
         hungerCo = StartCoroutine(DecreaseStats(1, 20, 1));
 
         //initialise the statBars

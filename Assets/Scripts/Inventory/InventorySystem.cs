@@ -34,7 +34,7 @@ public class InventorySystem : MonoBehaviour
         //create the grid
         grid = new Grid<GridObject>(gridWidth, gridHeight, cellSize, new Vector3(0, 0, 0), (Grid<GridObject> g, int x, int y) => new GridObject(g, x, y));
 
-        SortItems();
+        SortItems();        
     }
 
     private void Update()
