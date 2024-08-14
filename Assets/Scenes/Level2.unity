@@ -474,6 +474,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterBody
       objectReference: {fileID: 0}
+    - target: {fileID: 8796492371046132025, guid: dcb96d1a57d844c918a498c7c5576da5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
