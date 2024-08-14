@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FillerObject
   m_EditorClassIdentifier: 
   id: -1
-  itemName: Filler
+  itemName: filler
   size: {x: 0, y: 0}
   sprite: {fileID: 0}
   WorldPrefab: {fileID: 0}
