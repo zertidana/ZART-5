@@ -133,10 +133,10 @@ Material:
   m_Shader: {fileID: 4800000, guid: efdd1bbe3db07e5479bb07143c5d0c47, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - LOCAL_SPACE
   - _HEATMAP
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -259,7 +259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca34a6148db2d54493f84f379293f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GroupID: 0
 --- !u!4 &298527382
 Transform:
   m_ObjectHideFlags: 0
@@ -1377,17 +1376,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2596552551697446741, guid: d46107c8c93594bbc9faa2d7279943c8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.169
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977467471836387039, guid: d46107c8c93594bbc9faa2d7279943c8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4140912
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977467471836387039, guid: d46107c8c93594bbc9faa2d7279943c8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2877396
+      objectReference: {fileID: 0}
     - target: {fileID: 5977467471836387039, guid: d46107c8c93594bbc9faa2d7279943c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 507
       objectReference: {fileID: 0}
     - target: {fileID: 5977467471836387039, guid: d46107c8c93594bbc9faa2d7279943c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 91.7
+      value: 91.4547
       objectReference: {fileID: 0}
     - target: {fileID: 5977467471836387039, guid: d46107c8c93594bbc9faa2d7279943c8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 384.4
+      value: 386.084
       objectReference: {fileID: 0}
     - target: {fileID: 5977467471836387039, guid: d46107c8c93594bbc9faa2d7279943c8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1449,6 +1460,14 @@ PrefabInstance:
       propertyPath: statNums.Array.data[3]
       value: 
       objectReference: {fileID: 326338335}
+    - target: {fileID: 7873535195917062725, guid: d46107c8c93594bbc9faa2d7279943c8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873535195917062725, guid: d46107c8c93594bbc9faa2d7279943c8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.318
+      objectReference: {fileID: 0}
     - target: {fileID: 8743208797038873012, guid: d46107c8c93594bbc9faa2d7279943c8, type: 3}
       propertyPath: m_Name
       value: Player
