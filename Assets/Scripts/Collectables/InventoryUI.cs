@@ -9,11 +9,11 @@ public class InventoryUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //seashellText = GetComponent<TextMeshProUGUI>();
+        seashellText = GetComponent<TextMeshProUGUI>();
     }
 
     public void UpdateSeashellText(Collectables collectables)
     {
-        //seashellText.text = collectables.NumberOfSeashells.ToString();
+        seashellText.text = collectables.NumberOfSeashells.ToString();
     }
 }
