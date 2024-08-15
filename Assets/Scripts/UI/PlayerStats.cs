@@ -94,4 +94,9 @@ public class PlayerStats : MonoBehaviour
         // Load the Game Over scene
         SceneManager.LoadScene(3); 
     }
+
+    void Win()
+    {
+        //SceneManager.LoadScene(4);
+    }
 }
