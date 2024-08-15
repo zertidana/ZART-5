@@ -12,10 +12,8 @@ Dive into the depths of the ocean as an underwater explorer in this thrilling fi
 1. **Movement**: Use `W`, `A`, `S`, `D` to move forward, left, backward, and right, respectively. 
 2. **Looking Around**: Move the mouse to look around and change the direction you're facing.
 3. **Swimming**: If you enter water, you will start swimming automatically. Use the same movement keys to navigate underwater.
-4. **Jumping**: Press `Spacebar` to jump.
-5. **Crouching**: Press `Ctrl` to crouch and move through tight spaces.
-6. **Interacting**: Press `E` to interact with objects like treasure chests or air bubbles.
-7. **Collecting Treasures**: Explore the levels and collect all the treasures to progress to the next level.
+6. **Interacting**: Click to interact with objects/creatures like Fish.
+7. **Collecting Treasures**: Explore the levels and collect all the seashells to progress to the next level.
 8. **Checkpoints**: If you fall off platforms or get harmed, you'll respawn at the last checkpoint.
 
 ## 🎨 External Assets Used
@@ -39,11 +37,11 @@ This game was developed as part of a multi-platform game development project at 
 - A variety of platform types and traps to keep the gameplay engaging and challenging.
 - AI-controlled creatures that interact with the player, either helping or hindering their progress.
 
-This project utilized a range of external assets to create a visually and aurally immersive underwater experience. 🎨🔊
+This project utilised a range of external assets to create a visually and aurally immersive underwater experience. 🎨🔊
 
 ## ⚙️ Setup and Installation
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/underwater-explorer.git
+   git clone https://github.com/zertidana/ZART-5.git
 
 
