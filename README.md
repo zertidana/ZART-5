@@ -13,7 +13,7 @@ Dive into the depths of the ocean as an underwater explorer in this thrilling fi
 2. **Looking Around**: Move the mouse to look around and change the direction you're facing.
 3. **Swimming**: If you enter water, you will start swimming automatically. Use the same movement keys to navigate underwater.
 6. **Interacting**: Click to interact with objects/creatures like Fish.
-7. **Collecting Treasures**: Explore the levels and collect all the seashells to progress to the next level.
+7. **Collecting Treasures**: Explore the levels and collect all the coins to progress to the next level.
 8. **Checkpoints**: If you fall off platforms or get harmed, you'll respawn at the last checkpoint.
 
 ## 🎨 External Assets Used
@@ -24,6 +24,8 @@ Dive into the depths of the ocean as an underwater explorer in this thrilling fi
 - [AQUAS Lite - Built-In Render Pipeline](https://assetstore.unity.com/packages/vfx/shaders/aquas-lite-built-in-render-pipeline-53519)
 - [Emperor Angelfish](https://assetstore.unity.com/packages/3d/characters/animals/fish/emperor-angelfish-263329)
 - [Low Poly Rock Pack](https://assetstore.unity.com/packages/3d/environments/low-poly-rock-pack-57874)
+- [Mixamo Character](https://www.mixamo.com/#/?page=1&type=Character)
+- [Mixamo Animations](https://www.mixamo.com/#/?page=1&type=Motion%2CMotionPack)
   
 ## 📚 Creation Process
 This game was developed as part of a multi-platform game development project at QMUL. The concept revolves around the exploration of underwater environments, with the player navigating through complex levels filled with platforms, traps, and hidden treasures. The game was designed to progressively challenge the player, with evolving levels that adapt to their performance. 🕹️
