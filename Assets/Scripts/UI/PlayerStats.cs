@@ -3,29 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.SceneManagement; 
 
 public class PlayerStats : MonoBehaviour
 {
     public List<int> maxStats; //0 is oxygen, 1 is food, 2 is thirst, 3 is health
     List<int> currentStats;
 
-
     Coroutine oxygenCo;
     Coroutine hungerCo;
 
-
     bool swimCheck;
-
 
     [Header("UI")]
     public List<Slider> statBars;
     public List<TextMeshProUGUI> statNums;
-
-
-    [Header("Game Over UI")]
-    public GameObject gameOverScreen; 
-
 
     // Start is called before the first frame update
     void Start()
@@ -33,10 +25,8 @@ public class PlayerStats : MonoBehaviour
         //initialize currentStats to the max amount
         currentStats = new List<int>(maxStats);
 
-
         //start decreasing the values of hunger and thirst
         hungerCo = StartCoroutine(DecreaseStats(1, 20, 1));
-
 
         //initialize the statBars
         for (int i = 0; i < maxStats.Count; i++)
@@ -44,7 +34,6 @@ public class PlayerStats : MonoBehaviour
             statBars[i].maxValue = maxStats[i];
         }
     }
-
 
     // Update is called once per frame
     void Update()
@@ -61,14 +50,12 @@ public class PlayerStats : MonoBehaviour
             oxygenCo = StartCoroutine(DecreaseStats(0, 3, 3));
         }
 
-
         //display current stats in stat UI
         for(int i = 0; i < maxStats.Count; i++)
         {
             statBars[i].value = currentStats[i];
             statNums[i].text = currentStats[i].ToString();
         }
-
 
         // Check if health or oxygen reaches zero
         if (currentStats[0] <= 0 || currentStats[3] <= 0)
@@ -77,13 +64,11 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-
     IEnumerator DecreaseStats(int stat, int interval, int amount)
     {
         while (true)
         {
             yield return new WaitForSeconds(interval);
-
 
             if(currentStats[stat] > 0)
             {
@@ -91,7 +76,6 @@ public class PlayerStats : MonoBehaviour
             }
         }
     }
-
 
     public void ChangeStat(int stat, int refreshAmount)
     {
@@ -105,14 +89,9 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-
     void GameOver()
     {
-        // Show Game Over screen
-        gameOverScreen.SetActive(true);
-
-
-        // Optionally, stop all coroutines or freeze the game
-        Time.timeScale = 0f; // This will freeze the game
+        // Load the Game Over scene
+        SceneManager.LoadScene(3); 
     }
 }

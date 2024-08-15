@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     InventorySystem iSystem;
     public static bool inWater;
     public static bool isSwimming;
+    private Animator animator;
 
     //if inwater and not swimming, then activate float on top of water code. 
     //if not in water, activate walk code
@@ -40,12 +41,14 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         t = transform;
         Cursor.lockState = CursorLockMode.Locked;
         inWater = false;
 
         iSystem = InventorySystem.Instance;
+        
     }
 
     private void FixedUpdate()
@@ -113,6 +116,7 @@ public class PlayerController : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
         }
+
     }
 
     void LookAround()
