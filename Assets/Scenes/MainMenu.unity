@@ -197,6 +197,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 80146805}
   m_CullTransparentMesh: 1
+--- !u!1 &248863504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 512994374240152110, guid: 7c50eb712f23bff449cef4489e38b77f, type: 3}
+  m_PrefabInstance: {fileID: 4941133883228655347}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &248863505 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1145766898867735029, guid: 7c50eb712f23bff449cef4489e38b77f, type: 3}
@@ -285,10 +290,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 917720935}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayGame
-        m_Mode: 1
+      - m_Target: {fileID: 248863504}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2104220064}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1491,7 +1508,7 @@ GameObject:
   - component: {fileID: 1821453000}
   - component: {fileID: 1821452999}
   m_Layer: 5
-  m_Name: Button
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1560,7 +1577,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1821453000}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2104220064}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 248863504}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1821453000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1748,7 +1789,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2104220065
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1916,6 +1957,30 @@ PrefabInstance:
     - target: {fileID: 512994374240152110, guid: 7c50eb712f23bff449cef4489e38b77f, type: 3}
       propertyPath: m_Name
       value: SettingsMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 512994374240152110, guid: 7c50eb712f23bff449cef4489e38b77f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 570661763833766046, guid: 7c50eb712f23bff449cef4489e38b77f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 31.828
+      objectReference: {fileID: 0}
+    - target: {fileID: 570661763833766046, guid: 7c50eb712f23bff449cef4489e38b77f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -201.562
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079700934093971061, guid: 7c50eb712f23bff449cef4489e38b77f, type: 3}
+      propertyPath: m_Color.b
+      value: 0.15686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079700934093971061, guid: 7c50eb712f23bff449cef4489e38b77f, type: 3}
+      propertyPath: m_Color.g
+      value: 0.15686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079700934093971061, guid: 7c50eb712f23bff449cef4489e38b77f, type: 3}
+      propertyPath: m_Color.r
+      value: 0.15686275
       objectReference: {fileID: 0}
     - target: {fileID: 1145766898867735029, guid: 7c50eb712f23bff449cef4489e38b77f, type: 3}
       propertyPath: m_Pivot.x
@@ -2111,11 +2176,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4039331779534501795, guid: 7c50eb712f23bff449cef4489e38b77f, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4039331779534501795, guid: 7c50eb712f23bff449cef4489e38b77f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4113240110770661101, guid: 7c50eb712f23bff449cef4489e38b77f, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2198,7 +2263,8 @@ PrefabInstance:
       value: 0.15686275
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1447265022367560158, guid: 7c50eb712f23bff449cef4489e38b77f, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1145766898867735029, guid: 7c50eb712f23bff449cef4489e38b77f, type: 3}
       insertIndex: -1
