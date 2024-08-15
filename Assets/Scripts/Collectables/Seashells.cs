@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class Seashells : MonoBehaviour
 {
@@ -20,11 +21,21 @@ public class Seashells : MonoBehaviour
     {
         count++;
         UpdateCount();
+
+        if (count >= 10)
+        {
+            WinScreen();
+        }
     }
 
     void UpdateCount()
     {
         text.text = $"{count} / {Collectables.total}";
+    }
+
+    void WinScreen()
+    {
+        SceneManager.LoadScene(4);
     }
 /*
 {
@@ -41,4 +52,6 @@ public class Seashells : MonoBehaviour
     }
 
 */
+
+
 }

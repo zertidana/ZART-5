@@ -13,6 +13,8 @@ public class AnimationStateController : MonoBehaviour
     // Track whether the player is in water
     public static bool inWater;
 
+    public float checkRadius = 0.5f;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -24,6 +26,8 @@ public class AnimationStateController : MonoBehaviour
     void Update()
     {
         bool forward = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow); 
+        bool inWater = Physics.CheckSphere(transform.position, checkRadius, waterMask);
+        
         // Running
         if (forward)
         {
@@ -33,6 +37,17 @@ public class AnimationStateController : MonoBehaviour
         if (!forward)
         {
             animator.SetBool("isRunning", false);
+        }
+
+        // Swimming
+        if (inWater)
+        {
+            animator.SetBool("isSwimming", true);
+        }
+        
+        if (!inWater)
+        {
+            animator.SetBool("isSwimming", false);
         }
         
 /*
