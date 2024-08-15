@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
+
 public class PlayerController : MonoBehaviour
 {
     //reference the transform
@@ -12,31 +14,40 @@ public class PlayerController : MonoBehaviour
     public static bool isSwimming;
     private Animator animator;
 
-    //if inwater and not swimming, then activate float on top of water code. 
+
+    //if inwater and not swimming, then activate float on top of water code.
     //if not in water, activate walk code
     //if swimming, activate swimming code
 
+
     public LayerMask waterMask;
 
+
     Rigidbody rb;
+
+
 
 
     [Header("Player Rotation")]
     public float sensitivity = 1;
 
+
     //clamp variables
     public float rotationMin;
     public float rotationMax;
 
+
     //mouse input
     float rotationX;
     float rotationY;
+
 
     [Header("Player Movement")]
     public float speed = 1;
     float moveX;
     float moveY;
     float moveZ;
+
 
     // Start is called before the first frame update
     void Start()
@@ -47,9 +58,11 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         inWater = false;
 
+
         iSystem = InventorySystem.Instance;
-        
+       
     }
+
 
     private void FixedUpdate()
     {
@@ -61,28 +74,35 @@ public class PlayerController : MonoBehaviour
     }
 
 
+
+
         private void OnTriggerEnter(Collider other)
     {
         SwitchMovement();
     }
+
 
     private void OnTriggerExit(Collider other)
     {
         SwitchMovement();
     }
 
+
     void SwitchMovement()
     {
         //toggle isSwimming
         inWater = !inWater;
 
+
         //change the rigidbody accordingly
         rb.useGravity = !rb.useGravity;
     }
 
+
     void SwimmingOrFloating()
     {
         bool swimCheck = false;
+
 
         if (inWater)
         {
@@ -92,18 +112,17 @@ public class PlayerController : MonoBehaviour
                 if (hit.distance < 0.1f)
                 {
                     swimCheck = true;
-                    animator.SetBool("isSwimming", true); 
                 }
             }
             else
             {
                 swimCheck = true;
-                animator.SetBool("isSwimming", false); 
             }
         }
         isSwimming = swimCheck;
         Debug.Log(isSwimming);
     }
+
 
     // Update is called once per frame
     void Update()
@@ -113,13 +132,16 @@ public class PlayerController : MonoBehaviour
             LookAround();
         }
 
+
         //debug function to unlock cursor
         if (Input.GetKey(KeyCode.Escape))
         {
             Cursor.lockState = CursorLockMode.None;
         }
 
+
     }
+
 
     void LookAround()
     {
@@ -127,12 +149,14 @@ public class PlayerController : MonoBehaviour
         rotationX += Input.GetAxis("Mouse X") * sensitivity;
         rotationY += Input.GetAxis("Mouse Y") * sensitivity;
 
+
         //clamp the values of x and y
         rotationY = Mathf.Clamp(rotationY, rotationMin, rotationMax);
-        
+       
         //setting the rotation value every update
         t.localRotation = Quaternion.Euler(-rotationY, rotationX, 0);
     }
+
 
     void Move()
     {
@@ -140,6 +164,7 @@ public class PlayerController : MonoBehaviour
         moveX = Input.GetAxis("Horizontal");
         moveZ = Input.GetAxis("Forward");
         moveY = Input.GetAxis("Vertical");
+
 
         //check if the player is standing still
         if (inWater) //If in water, velocity = 0
@@ -154,13 +179,13 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector2(0, rb.velocity.y);
             }
         }
-        
+       
         //check if player is on land
         if (!inWater)
         {
             //move the character (land ver)
             t.Translate(new Quaternion(0, t.rotation.y, 0, t.rotation.w) * new Vector3(moveX, 0, moveZ) * Time.deltaTime * speed, Space.World);
-            
+           
         }
         else
         {
@@ -171,12 +196,15 @@ public class PlayerController : MonoBehaviour
                 moveY = Mathf.Min(moveY, 0);
                 //animator.SetBool("IsSwimming", true)
 
-                //convert the local direction vector into a worldspace vector. 
+
+                //convert the local direction vector into a worldspace vector.
                 Vector3 clampedDirection = transform.TransformDirection(new Vector3(moveX, moveY, moveZ));
                 //clamp the values
                 clampedDirection = new Vector3(clampedDirection.x, Mathf.Min(clampedDirection.y, 0), clampedDirection.z);
 
+
                 t.Translate(clampedDirection * Time.deltaTime * speed, Space.World);
+
 
             }
             else

@@ -23,7 +23,7 @@ public class AnimationStateController : MonoBehaviour
 
     void Update()
     {
-        bool forward = Input.GetKey("w");
+        bool forward = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow); 
         // Running
         if (forward)
         {
