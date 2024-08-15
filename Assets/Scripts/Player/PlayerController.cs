@@ -92,11 +92,13 @@ public class PlayerController : MonoBehaviour
                 if (hit.distance < 0.1f)
                 {
                     swimCheck = true;
+                    animator.SetBool("isSwimming", true); 
                 }
             }
             else
             {
                 swimCheck = true;
+                animator.SetBool("isSwimming", false); 
             }
         }
         isSwimming = swimCheck;
@@ -143,6 +145,7 @@ public class PlayerController : MonoBehaviour
         if (inWater) //If in water, velocity = 0
         {
             rb.velocity = new Vector2(0, 0);
+            //animator.SetBool("IsSwimming", true)
         }
         else
         {
@@ -157,6 +160,7 @@ public class PlayerController : MonoBehaviour
         {
             //move the character (land ver)
             t.Translate(new Quaternion(0, t.rotation.y, 0, t.rotation.w) * new Vector3(moveX, 0, moveZ) * Time.deltaTime * speed, Space.World);
+            
         }
         else
         {
@@ -165,6 +169,7 @@ public class PlayerController : MonoBehaviour
             {
                 //if the character is floating on the water, clamp the moveY value, so they cant rise further than that.
                 moveY = Mathf.Min(moveY, 0);
+                //animator.SetBool("IsSwimming", true)
 
                 //convert the local direction vector into a worldspace vector. 
                 Vector3 clampedDirection = transform.TransformDirection(new Vector3(moveX, moveY, moveZ));
