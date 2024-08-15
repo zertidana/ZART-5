@@ -6,7 +6,7 @@ Preset:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Transform
+  m_Name: player
   m_TargetType:
     m_NativeTypeID: 4
     m_ManagedTypePPtr: {fileID: 0}
@@ -14,15 +14,15 @@ Preset:
   m_Properties:
   - target: {fileID: 0}
     propertyPath: m_LocalRotation.x
-    value: -0
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_LocalRotation.y
-    value: -0
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_LocalRotation.z
-    value: -0
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_LocalRotation.w
@@ -30,27 +30,27 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_LocalPosition.x
-    value: 192.70001
+    value: 504.8887
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_LocalPosition.y
-    value: 72.5
+    value: 107.84
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_LocalPosition.z
-    value: 381.698
+    value: 325.5
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_LocalScale.x
-    value: 1
+    value: 5.225832
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_LocalScale.y
-    value: 1
+    value: 4.6790504
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_LocalScale.z
-    value: 1
+    value: 3.1866505
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_ConstrainProportionsScale
