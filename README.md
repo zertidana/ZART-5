@@ -17,18 +17,14 @@ Dive into the depths of the ocean as an underwater explorer in this thrilling fi
 8. **Checkpoints**: If you fall off platforms or get harmed, you'll respawn at the last checkpoint.
 
 ## 🎨 External Assets Used
-- [Aquatic Soundscapes Adventure Game Music](https://dhsfx.itch.io/aquatic-soundscapes-adventure-game-music) 🎵
-- [Aquatic Animal Models](https://rkuhlf-assets.itch.io/aquatic-animal-models) 🐠
-- [Fishes and Underwater Environment Set](https://assetstore.unity.com/packages/3d/vegetation/fishes-and-underwater-environment-set-123678) 🌿
+- [Ambient Video Game Music - Underwater Worlds](https://assetstore.unity.com/packages/audio/ambient/nature/ambient-video-game-music-underwater-worlds-220371) 🎵
+- [50 Fish Icons]([https://rkuhlf-assets.itch.io/aquatic-animal-models](https://assetstore.unity.com/packages/2d/gui/icons/50-fish-icons-64722)) 🐠
 - [3D Seashell Model](https://assetstore.unity.com/packages/3d/characters/animals/fish/3d-seashell-208785) 🐚
-- [Pirate Coin Model](https://assetstore.unity.com/packages/3d/props/pirate-coin-207743) 💰
-- [Treasure Chest Model](https://assetstore.unity.com/packages/3d/props/interior/treasure-chest-pbr-72498) 🗝️
-- [Gold Coins Models](https://assetstore.unity.com/packages/3d/props/gold-coins-1810) 🪙
 - [Simple Boids Fish](https://assetstore.unity.com/packages/3d/characters/animals/simple-boids-flocks-of-birds-fish-and-insects-164188) 🐟
-- [3D Diver Model](https://www.cgtrader.com/free-3d-models/character/other/diver-cartoon) 🤿
-- [UI: Wooden Buttons](https://www.freepik.com/free-vector/wooden-buttons-ui-game_12632833.htm) 🪵
-- [UI: Wooden Scrolls](https://www.freepik.com/free-vector/game-ui-scrolls-wooden-boards-antique-parchments-cartoon-menu-interface-wood-textured-planks-gui-graphic-design-elements-user-panel-with-settings-options-adventure-isolated-2d-vector-set_18482109.htm) 📜
-
+- [AQUAS Lite - Built-In Render Pipeline](https://assetstore.unity.com/packages/vfx/shaders/aquas-lite-built-in-render-pipeline-53519)
+- [Emperor Angelfish](https://assetstore.unity.com/packages/3d/characters/animals/fish/emperor-angelfish-263329)
+- [Low Poly Rock Pack](https://assetstore.unity.com/packages/3d/environments/low-poly-rock-pack-57874)
+  
 ## 📚 Creation Process
 This game was developed as part of a multi-platform game development project at QMUL. The concept revolves around the exploration of underwater environments, with the player navigating through complex levels filled with platforms, traps, and hidden treasures. The game was designed to progressively challenge the player, with evolving levels that adapt to their performance. 🕹️
 
