@@ -6,8 +6,7 @@ using UnityEngine;
 public class ItemScriptableObject : ScriptableObject
 {
     public int id;
-    public string itemName;
-    public Vector2 size; //how many across x and how many across y
+    public Vector2 size= Vector2.one; //how many across x and how many across y
     public Sprite sprite;
     public GameObject WorldPrefab;
 }
