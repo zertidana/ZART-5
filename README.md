@@ -1,5 +1,5 @@
 # 🌊 ZART 
-##  Underwater Explorer 3D Platformer
+Underwater Explorer 3D Platformer
 
 ## Summary
 Dive into the depths of the ocean as an underwater explorer in this thrilling first-person 3D platformer! 🧭 Search for hidden treasures, navigate through dangerous underwater environments, and overcome various obstacles and hazards. Can you complete the levels and find all the treasures? 🌟
