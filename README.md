@@ -18,7 +18,7 @@ Dive into the depths of the ocean as an underwater explorer in this thrilling fi
 
 ## 🎨 External Assets Used
 - [Ambient Video Game Music - Underwater Worlds](https://assetstore.unity.com/packages/audio/ambient/nature/ambient-video-game-music-underwater-worlds-220371) 🎵
-- [50 Fish Icons]([https://rkuhlf-assets.itch.io/aquatic-animal-models](https://assetstore.unity.com/packages/2d/gui/icons/50-fish-icons-64722)) 🐠
+- [50 Fish Icons](https://assetstore.unity.com/packages/2d/gui/icons/50-fish-icons-64722) 🐠
 - [3D Seashell Model](https://assetstore.unity.com/packages/3d/characters/animals/fish/3d-seashell-208785) 🐚
 - [Simple Boids Fish](https://assetstore.unity.com/packages/3d/characters/animals/simple-boids-flocks-of-birds-fish-and-insects-164188) 🐟
 - [AQUAS Lite - Built-In Render Pipeline](https://assetstore.unity.com/packages/vfx/shaders/aquas-lite-built-in-render-pipeline-53519)
