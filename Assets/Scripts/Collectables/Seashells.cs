@@ -22,9 +22,9 @@ public class Seashells : MonoBehaviour
         count++;
         UpdateCount();
 
-        if (count >= 10)
+        if (count >= Collectables.total)
         {
-            WinScreen();
+            SceneController.instance.NextLevel();
         }
     }
 
@@ -33,10 +33,6 @@ public class Seashells : MonoBehaviour
         text.text = $"{count} / {Collectables.total}";
     }
 
-    void WinScreen()
-    {
-        SceneManager.LoadScene(4);
-    }
 /*
 {
 }

@@ -8,8 +8,22 @@ public class SceneController : MonoBehaviour
 {
     public static SceneController instance;
     [SerializeField] Animator transitionAnim;
-    // Start is called before the first frame update
-    void NextLevel()
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
+    public void NextLevel()
     {
         StartCoroutine(LoadLevel());
     }
