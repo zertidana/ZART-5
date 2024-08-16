@@ -7543,7 +7543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ffbd4812e397469bb98ccd849ced7f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxStats: 780000006400000064000000d0070000
+  maxStats: 1e0000006400000064000000d0070000
   statBars:
   - {fileID: 2359673311963895963}
   - {fileID: 448024025}
@@ -8330,7 +8330,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06151a1ce1a93c447a5fe7fd27f9a84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionAnim: {fileID: 1879140005}
 --- !u!114 &7190566303700469701
 MonoBehaviour:
   m_ObjectHideFlags: 0

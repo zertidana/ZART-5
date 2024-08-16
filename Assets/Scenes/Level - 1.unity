@@ -4469,7 +4469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8837735486683034989, guid: 0b61c74949f463c4184763f2d550105a, type: 3}
       propertyPath: maxStats.Array.data[0]
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8837735486683034989, guid: 0b61c74949f463c4184763f2d550105a, type: 3}
       propertyPath: maxStats.Array.data[2]
