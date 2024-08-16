@@ -24,7 +24,7 @@ public class Seashells : MonoBehaviour
 
         if (count >= 3)//Collectables.total)
         {
-            SceneController.instance.NextLevel();
+            sceneController.LoadNextScene();
         }
 
     }

@@ -92,6 +92,6 @@ public class PlayerStats : MonoBehaviour
     void GameOver()
     {
         // Load the Game Over scene
-        SceneManager.LoadScene(3); 
+        SceneManager.LoadScene(4); 
     }
 }

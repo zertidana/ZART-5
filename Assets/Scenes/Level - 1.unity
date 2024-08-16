@@ -4469,7 +4469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8837735486683034989, guid: 0b61c74949f463c4184763f2d550105a, type: 3}
       propertyPath: maxStats.Array.data[0]
-      value: 120
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8837735486683034989, guid: 0b61c74949f463c4184763f2d550105a, type: 3}
       propertyPath: maxStats.Array.data[2]
@@ -5576,7 +5576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06151a1ce1a93c447a5fe7fd27f9a84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionAnim: {fileID: 1879140005}
 --- !u!114 &7191039234464407647
 MonoBehaviour:
   m_ObjectHideFlags: 0
