@@ -11,10 +11,11 @@ Dive into the depths of the ocean as an underwater explorer in this thrilling fi
 ## 🎮 How to Play
 1. **Movement**: Use `W`, `A`, `S`, `D` to move forward, left, backward, and right, respectively. 
 2. **Looking Around**: Move the mouse to look around and change the direction you're facing.
-3. **Swimming**: If you enter water, you will start swimming automatically. Use the same movement keys to navigate underwater.
-6. **Interacting**: Click to interact with objects/creatures like Fish.
-7. **Collecting Treasures**: Explore the levels and collect all the coins to progress to the next level.
-8. **Checkpoints**: If you fall off platforms or get harmed, you'll respawn at the last checkpoint.
+3. **Swimming**: If you enter water, you will start swimming automatically. Use the same movement keys to navigate underwater. Only difference is that you have a float key which is the space bar.
+6. **Interacting**: Click to interact with objects/creatures like Fish and add to inventory.
+7. **Inventory**: Left shift to access inventory, ordered by size.
+8. **Collecting Treasures**: Explore the levels and collect all the coins to progress to the next level.
+9. **Checkpoints**: If you fall off platforms or get harmed, you'll respawn at the last checkpoint.
 
 ## 🎨 External Assets Used
 - [Ambient Video Game Music - Underwater Worlds](https://assetstore.unity.com/packages/audio/ambient/nature/ambient-video-game-music-underwater-worlds-220371) 🎵
