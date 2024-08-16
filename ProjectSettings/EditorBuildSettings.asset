@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SecondLevel.unity
     guid: 5638f28ea77cc8e4c8eecf6be170a471
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/EndMenu.unity
     guid: 8ec1a4c5424da934d8bba42453b7b373
   - enabled: 0

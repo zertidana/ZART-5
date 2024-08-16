@@ -22,32 +22,17 @@ public class Seashells : MonoBehaviour
         count++;
         UpdateCount();
 
-        if (count >= Collectables.total)
+        if (count >= 3)//Collectables.total)
         {
             SceneController.instance.NextLevel();
         }
+
     }
 
     void UpdateCount()
     {
         text.text = $"{count} / {Collectables.total}";
     }
-
-/*
-{
-}
-    private void OnTriggerEnter(Collider other)
-    {
-        Collectables collectables = other.GetComponent<Collectables>();
-
-        if (collectables != null)
-        {
-            collectables.SeashellsCollected();
-            gameObject.SetActive(false);
-        }
-    }
-
-*/
 
 
 }
